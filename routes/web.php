@@ -1,0 +1,12 @@
+<?php
+
+use App\Http\Controllers\CommonSpecsController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('simple', [CommonSpecsController::class, 'simple'])->name('simple_route');
+Route::get('simple_view', [CommonSpecsController::class, 'simple_view']);
+Route::get('error', [CommonSpecsController::class, 'error']);
